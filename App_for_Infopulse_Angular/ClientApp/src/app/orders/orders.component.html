@@ -1,0 +1,35 @@
+<!--<div class="row mt-4 mb-3">
+  <div class="col">
+    <h4 style="color:dodgerblue; font-weight:bold">Orders</h4>
+  </div>
+  <div class="col text-right">
+    <button class="btn btn-secondary" [routerLink]="['/addproduct']">New Order</button>
+  </div>
+</div>-->
+
+
+<app-second-title-with-button [actionTitle]="title" [buttonTitle]="btnTitle" (onChanged)="onChanged()"></app-second-title-with-button>
+<p *ngIf="!orders"><em>Loading...</em></p>
+
+<div class="secondborder">
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="orders">
+    <thead>
+      <tr>
+        <th class="text-center">Order Number</th>
+        <th class="text-center">Customer Name</th>
+        <th class="text-center">Customer Address</th>
+        <th class="text-center">Total Cost</th>
+        <th class="text-center">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td class="text-center">{{order.orderId}}</td>
+        <td class="text-center">{{order.customerId}}</td>
+        <td class="text-center">{{order.totalCost}}</td>
+        <td class="text-center">{{order.createDate | date:'medium'}}</td>
+        <td class="text-center">{{order.comment}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

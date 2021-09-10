@@ -1,0 +1,12 @@
+.maintitle{
+  margin: 40px 20px;
+}
+h3 {
+  font-weight: bold;
+}
+.smalltitle {
+  margin-left: 85px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: -10px;
+}

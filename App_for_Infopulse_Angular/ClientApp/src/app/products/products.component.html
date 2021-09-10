@@ -1,0 +1,47 @@
+<!--<div class="row mt-4 mb-3">
+  <div class="col">
+    <h4 style="color:dodgerblue; font-weight:bold">Products</h4>
+  </div>
+  <div class="col text-right">
+    <button class="btn btn-secondary"  [routerLink]="['/addproduct']">New Product</button>
+  </div>
+</div>-->
+
+<!--<h2>Количество кликов: {{clicks}}</h2>-->
+<app-second-title-with-button [actionTitle]="title"  [buttonTitle]="btnTitle"  (onChanged)="onChanged()"></app-second-title-with-button>
+
+<p *ngIf="!products"><em>Loading...</em></p>
+
+<div class="secondborder">
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="products">
+    <thead>
+      <tr>
+        <th class="text-center">Product Id</th>
+        <th class="text-center">Product Name</th>
+        <th class="text-center">Product Category</th>
+        <th class="text-center">Product Size</th>
+        <th class="text-center">Quantity</th>
+        <th class="text-center">Price</th>
+        <th class="text-center">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td class="text-center">{{product.productId}}</td>
+        <td class="text-center">{{product.name}}</td>
+        <td class="text-center">{{product.category}}</td>
+        <td class="text-center">{{product.productSize}}</td>
+        <td class="text-center">{{product.quantity}}</td>
+        <td class="text-center">{{product.price}}</td>
+        <td class="text-center">
+          <a href="#">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+

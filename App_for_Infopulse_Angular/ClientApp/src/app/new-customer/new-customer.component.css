@@ -1,0 +1,31 @@
+.textfont {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.buttonsdiv {
+  margin-right: 100px;
+}
+
+.savebtn {
+  width: 130px;
+  color: black;
+}
+
+.cancelbtn {
+  margin-left: 20px;
+  width: 130px;
+  color: black;
+}
+input, textarea {
+  border: 3px solid #808080;
+  border-radius: 10px;
+  width:285px;
+  height:50px;
+}
+.marginbutton{
+  margin-top:100px;
+}
+.textareastyle{
+  height: 150px;
+}

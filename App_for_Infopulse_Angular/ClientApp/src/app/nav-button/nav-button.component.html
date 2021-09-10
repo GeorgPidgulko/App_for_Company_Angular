@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white  mb-4" style="padding:0 !important;">
+  <!--box-shadow-->
+  <div class="container" style="padding:0 !important;">
+
+
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-start"
+         [ngClass]="{ show: isExpanded }">
+      <ul class="navbar-nav flex-grow">
+        <li class="nav-item"
+            [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }">
+          <a class="nav-link text-dark btn btn-outline-secondary sizebutton" [routerLink]="['/']">Orders</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['link-active']">
+          <a class="nav-link text-dark btn btn-secondary ml-3 sizebutton" [routerLink]="['/products']">Products</a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['link-active']">
+          <a class="nav-link text-dark btn btn-secondary ml-3 sizebutton" [routerLink]="['/customers']">Customers</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

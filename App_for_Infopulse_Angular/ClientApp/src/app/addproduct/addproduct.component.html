@@ -1,0 +1,72 @@
+<app-action-title [actionTitle]="title"></app-action-title>
+<div class="row">
+  <div class="col-4">
+    <span class="textfont">Created Date:</span>
+  </div>
+  <div class="col-8">
+    <div class="textfont">{{product.createdDate}}</div>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-4">
+    <div class="textfont">Product Name:</div>
+  </div>
+  <div class="col-8">
+    <input type="text" [(ngModel)]="product.name" />
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-4">
+    <div class="textfont">Product Category:</div>
+  </div>
+  <div class="col-8">
+    <mat-form-field appearance="fill">     
+      <mat-select [(ngModel)]="selectedCategory" >
+        <mat-option *ngFor="let item of keys()" [value]="item">
+          {{productCategories[item]}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+<!--<div class="row mt-4">
+  <div class="col-4">
+    <div style="font-size:13px; font-weight:bold">Product Size:</div>
+  </div>
+  <div class="col-8">
+    <MatSelectItem @bind-Value="product.ProductSize" Items="@GetProductSizes()"></MatSelectItem>
+  </div>
+</div>-->
+<div class="row mt-4">
+  <div class="col-4">
+    <div class="textfont">Available Quantity:</div>
+  </div>
+  <div class="col-8">
+    <input type="number" [(ngModel)]="product.quantity"/>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-4">
+    <div class="textfont">Price:</div>
+  </div>
+  <div class="col-8">
+    <input type="number" [(ngModel)]="product.price"/>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-4">
+    <div class="textfont">Description:</div>
+  </div>
+  <div class="col-8">
+    <textarea [(ngModel)]="product.description">
+
+       </textarea>
+  </div>
+</div>
+<div class="row mt-4 mb-3">
+  <div class="col text-right buttonsdiv">
+    <button class="btn btn-secondary savebtn" (click)="createProduct()">Save</button>
+    <a class="btn btn-secondary cancelbtn" [routerLink]="['/products']">Cancel</a>
+  </div>
+</div>

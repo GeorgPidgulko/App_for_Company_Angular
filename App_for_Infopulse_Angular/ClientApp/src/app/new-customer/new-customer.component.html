@@ -1,0 +1,35 @@
+<app-action-title [actionTitle]="title"></app-action-title>
+<div class="row textfont">
+  <div class="col-2">
+    Created Date:
+  </div>
+  <div class="col-2" style="padding:0 0 0 15px">
+    {{customer.createDate | date:'medium'}}
+  </div>
+</div>
+<div class="row textfont mt-4">
+  <div class="col-2">
+    Customer Name:
+  </div>
+  <div class="col-2">
+    <div>
+      <input type="text"  [(ngModel)]="customer.name"/>
+    </div>
+  </div>
+</div>
+<div class="row textfont mt-4" style="height:150px">
+  <div class="col-2">
+    Address:
+  </div>
+  <div class="col-2">
+    <div>
+      <textarea type="text" class="textareastyle" [(ngModel)]="customer.address"></textarea>
+    </div>
+  </div>
+</div>
+<div class="row marginbutton">
+  <div class="col text-right buttonsdiv">
+    <button class="btn btn-secondary savebtn" (click)="CreateNewCustomer()">Save</button>
+    <a class="btn btn-secondary cancelbtn" [routerLink]="['/customers']">Cancel</a>
+  </div>
+</div>

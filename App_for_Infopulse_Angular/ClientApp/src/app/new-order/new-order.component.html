@@ -1,0 +1,68 @@
+
+
+<app-action-title [actionTitle]="title"></app-action-title>
+<div class="row">
+  <div class="col-4">
+    <span style="font-size:13px; font-weight:bold">Order Date:</span>
+  </div>
+  <div class="col-8">
+    <div style="font-size:13px; font-weight:bold">09/09/2021</div>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-4">
+    <div style="font-size:13px; font-weight:bold">Customer:</div>
+  </div>
+  <div class="col-8">
+    <input type="text" />
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-4">
+    <div style="font-size:13px; font-weight:bold">Status:</div>
+  </div>
+  <div class="col-8">
+    <mat-form-field appearance="fill">
+      <mat-select >
+        <!--<mat-option *ngFor="let item of keys()" [value]="item">-->
+          
+        <!--</mat-option>-->
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+<!--<div class="row mt-4">
+  <div class="col-4">
+    <div style="font-size:13px; font-weight:bold">Product Size:</div>
+  </div>
+  <div class="col-8">
+    <MatSelectItem @bind-Value="product.ProductSize" Items="@GetProductSizes()"></MatSelectItem>
+  </div>
+</div>-->
+
+<div class="row mt-4">
+  <div class="col-4">
+    <div style="font-size:13px; font-weight:bold">Price:</div>
+  </div>
+  <div class="col-8">
+    <div style="font-size:13px; font-weight:bold">$150</div>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-4">
+    <div style="font-size:13px; font-weight:bold">Description:</div>
+  </div>
+  <div class="col-8">
+    <textarea >
+
+       </textarea>
+  </div>
+</div>
+<div class="row mt-4 mb-3">
+  <div class="col text-right btnstyle">
+    <button class="btn btn-secondary savestyle">Save</button>
+    <a class="btn btn-secondary cancelstyle" [routerLink]="['/']">Cancel</a>
+  </div>
+</div>
+

@@ -1,0 +1,16 @@
+.textfont {
+  font-size:13px;
+  font-weight:bold;
+}
+.buttonsdiv {
+  margin-right: 100px;
+}
+.savebtn {
+  width: 130px;
+  color: black;
+}
+.cancelbtn {
+  margin-left: 20px;
+  width: 130px;
+  color: black;
+}

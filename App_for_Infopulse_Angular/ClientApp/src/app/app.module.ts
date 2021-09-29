@@ -5,7 +5,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { ProductsComponent } from './products/products.component';
 import { AddproductComponent } from './addproduct/addproduct.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,11 +17,11 @@ import { ActionTitleComponent } from './action-title/action-title.component';
 import { MatSelectModule } from '@angular/material/select';
 import { NewOrderComponent } from './new-order/new-order.component';
 import { NewCustomerComponent } from './new-customer/new-customer.component';
+import { TodayMeetingComponent } from './today-meeting/today-meeting.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavMenuComponent,
     ProductsComponent,
     AddproductComponent,
     MainTitleComponent,
@@ -32,7 +31,8 @@ import { NewCustomerComponent } from './new-customer/new-customer.component';
     SecondTitleWithButtonComponent,
     ActionTitleComponent,
     NewOrderComponent,
-    NewCustomerComponent
+    NewCustomerComponent,
+    TodayMeetingComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -45,6 +45,7 @@ import { NewCustomerComponent } from './new-customer/new-customer.component';
       { path: 'customers', component: CustomersComponent },
       { path: 'neworder', component: NewOrderComponent },
       { path: 'newcustomer', component: NewCustomerComponent },
+      { path: 'meeting', component: TodayMeetingComponent },
     ]),
     BrowserAnimationsModule,
     MatSelectModule
